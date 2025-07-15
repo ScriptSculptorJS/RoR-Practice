@@ -14,6 +14,8 @@
     <%= javascript_importmap_tags %>
   </head>
   <body>
+    <!--telling rails to render this partial-->
+    <%= render "home/header" %>
     <div class="container">
       <%= yield %>
     </div>
