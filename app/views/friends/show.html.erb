@@ -1,0 +1,31 @@
+<p style="color: green"><%= notice %></p>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">First name:</th>
+      <th scope="col">Last name:</th>
+      <th scope="col">Email:</th>
+      <th scope="col">Phone:</th>
+      <th scope="col">Twitter:</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr id="<%= dom_id @friend %>">
+      <th scope="row"><%= @friend.first_name %></th>
+      <td><%= @friend.last_name %></td>
+      <td><%= @friend.email %></td>
+      <td><%= @friend.phone %></td>
+      <td><%= @friend.twitter %></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+<div>
+  <%= link_to "Edit", edit_friend_path(@friend) %> |
+  <%= link_to "Back to friends", friends_path %>
+  <%= button_to "Destroy this friend", @friend, method: :delete %>
+</div>

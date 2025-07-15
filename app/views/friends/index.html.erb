@@ -1,0 +1,25 @@
+<p style="color: green"><%= notice %></p>
+<% content_for :title, "Friends" %>
+<h1>Friends</h1>
+<div id="friends">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">First name:</th>
+        <th scope="col">Last name:</th>
+        <th scope="col">Email:</th>
+        <th scope="col">Phone:</th>
+        <th scope="col">Twitter:</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @friends.each do |friend| %>
+        <%= render friend %>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+<%= link_to "New friend", new_friend_path %>
