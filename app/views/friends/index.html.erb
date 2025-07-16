@@ -8,6 +8,7 @@
         <th scope="col">Email:</th>
         <th scope="col">Phone:</th>
         <th scope="col">Twitter:</th>
+        <th scope="col">User Id:</th>
         <th></th>
         <th></th>
         <th></th>
@@ -15,7 +16,10 @@
     </thead>
     <tbody>
       <% @friends.each do |friend| %>
-        <%= render friend %>
+        <!-- only shows user's friends -->
+        <% if friend.user == current_user %>
+          <%= render friend %>
+        <% end %>
       <% end %>
     </tbody>
   </table>
